@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gehel x | Mobile VIP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            color: white;
+        }
+
+        /* باکگراوندی ئۆتۆمبێلە لوکسەکە */
+        .car-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1000&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            z-index: -2;
+            filter: brightness(0.35);
+        }
+
+        /* ئەنیمەیشنی لایتەکان */
+        .headlights-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 25% 60%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 75% 60%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 25% 60%, rgba(241, 196, 15, 0.4) 0%, rgba(241, 196, 15, 0) 30%),
+                radial-gradient(circle at 75% 60%, rgba(241, 196, 15, 0.4) 0%, rgba(241, 196, 15, 0) 30%);
+            z-index: -1;
+            opacity: 0;
+            animation: lightPulse 3s infinite alternate;
+        }
+
+        @keyframes lightPulse {
+            0%, 15% { opacity: 0; filter: blur(5px); }
+            45%, 65% { opacity: 1; filter: blur(15px); }
+            85%, 100% { opacity: 0.1; filter: blur(5px); }
+        }
+
+        /* کارتی شووشەیی */
+        .main-card {
+            width: 90%;
+            max-width: 380px;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            padding: 35px 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.9);
+            z-index: 10;
+        }
+
+        /* وێنەی پڕۆفایلی نوێ */
+        .profile-img-container {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid #f1c40f;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 0 25px rgba(241, 196, 15, 0.5);
+            overflow: hidden;
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 { 
+            font-size: 28px; 
+            letter-spacing: 2px; 
+            color: #fff; 
+            margin-bottom: 30px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .links-group { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 16px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn img { width: 26px; height: 26px; }
+
+        .snap-btn:active { background: #FFFC00; color: #000; }
+        .tiktok-btn:active { background: #fff; color: #000; }
+        .whatsapp-btn:active { background: #25D366; color: #fff; }
+
+        .wheel-footer {
+            margin-top: 35px;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #888;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="car-bg"></div>
+    <div class="headlights-glow"></div>
+
+    <div class="main-card">
+        <div class="profile-img-container">
+            <img src="https://i.ibb.co/3n4wYM5/IMG-20260330-023215.jpg" alt="Gehel x">
+        </div>
+        
+        <h1>Gehel x</h1>
+
+        <div class="links-group">
+            <a href="https://snapchat.com/t/gBFalr5b" class="btn snap-btn" target="_blank">
+                <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c536.png" alt="Snapchat">
+                Snapchat
+            </a>
+
+            <a href="https://www.tiktok.com/@gehel.x?_r=1&_t=ZS-956aBzGcMS4" class="btn tiktok-btn" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+                TikTok
+            </a>
+
+            <a href="https://wa.me/message/TRQFFRX7ZN25F1" class="btn whatsapp-btn" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                WhatsApp
+            </a>
+        </div>
+        
+        <div class="wheel-footer">
+            🛞 LUXURY AUTO DEALER 🛞
+        </div>
+    </div>
+
+</body>
+</html>
